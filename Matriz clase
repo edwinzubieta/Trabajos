@@ -1,0 +1,82 @@
+package matriz;
+
+import java.util.Scanner;
+
+public class Matriz {
+
+    static Scanner entrada = new Scanner(System.in);
+    static int [][]matriz1 = null;
+    
+    
+    public static void main(String[] args) {
+
+        matriz1 = dimensionesdelamatriz(matriz1);
+        int opcion = 0;
+
+        System.out.println("FILAS: " + matriz1.length);
+        System.out.println("COLUMNAS: " + matriz1[0].length);
+        
+        do {
+                System.out.println("\n\t\tMENU PRINCIPAL");
+                System.out.println("\t\t---- -----------\n");
+                System.out.println("[1]Imprimir Matriz");
+                System.out.println("[A] -- Rellenar Matriz");
+                System.out.println("[B] -- Sumar 1 fila ");
+                System.out.println("[C] -- Sumar ultima columna ");
+                System.out.println("[E] -- Sumar diagonal principal ");
+                System.out.println("[E] -- Sumar diagonal inversa");
+                System.out.println("[F] -- Media de los elementos  ");
+                System.out.println("[G] -- Terminar programa ");
+                System.out.print("Opcion: ");
+                opcion = Integer.parseInt(entrada.nextLine());
+                switch(opcion) {
+                    case 1 -> dimensionesdelamatriz(matriz1);
+
+                default -> System.out.println("Opcion equivocada");
+        }
+        }while(opcion != 9);
+
+    }
+
+        private static int[][] dimensionesdelamatriz(int [][]x) {
+            
+            System.out.println("Ingrese el tamaño de la matriz filas & columnas ");
+            String datosingresados = entrada.next();
+            
+            String[] datos = datosingresados.split("&");
+            
+            int filas = Integer.parseInt(datos[0]);
+            int columnas = Integer.parseInt(datos[0]);
+            
+            x = new int [filas][columnas];
+        
+            return x;
+    }
+
+        
+        public static void rellenarmatriz (int[][] x ){
+        
+            System.out.println("ingrese los valores de la matriz");
+            
+            for (int i = 0; i < x.length; i++){
+                for(int j = 0; j < x [i].length; j++){
+                    x[i][j] = Integer.parseInt(entrada.next());
+                }
+        
+            }
+        }
+        
+        public static void imprimirmatriz (int [][] x){
+
+            for (int i = 0; i < x.length; i++ ){
+                for (int j = 0; j < x [i].length; j++){
+                    System.out.println(x[i][j]);
+                                 
+            
+                }
+                System.out.println();
+            }
+              
+        }
+  
+}
