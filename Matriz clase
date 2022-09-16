@@ -20,19 +20,21 @@ public class Matriz {
                 System.out.println("\n\t\tMENU PRINCIPAL");
                 System.out.println("\t\t---- -----------\n");
                 System.out.println("[1]Imprimir Matriz");
-                System.out.println("[A] -- Rellenar Matriz");
-                System.out.println("[B] -- Sumar 1 fila ");
-                System.out.println("[C] -- Sumar ultima columna ");
-                System.out.println("[E] -- Sumar diagonal principal ");
-                System.out.println("[E] -- Sumar diagonal inversa");
-                System.out.println("[F] -- Media de los elementos  ");
-                System.out.println("[G] -- Terminar programa ");
+                System.out.println("[2] -- Rellenar Matriz");
+                System.out.println("[3] -- Sumar 1 fila ");
+                System.out.println("[4] -- Sumar ultima columna ");
+                System.out.println("[5] -- Sumar diagonal principal ");
+                System.out.println("[6] -- Sumar diagonal inversa");
+                System.out.println("[7] -- Media de los elementos  ");
+                System.out.println("[8] -- Terminar programa ");
                 System.out.print("Opcion: ");
                 opcion = Integer.parseInt(entrada.nextLine());
                 switch(opcion) {
-                    case 1 -> dimensionesdelamatriz(matriz1);
-
-                default -> System.out.println("Opcion equivocada");
+                    case 1:
+			dimensionesdelamatriz(matriz1);
+				break;
+			default:
+				System.out.println("Opción equivocada");
         }
         }while(opcion != 9);
 
@@ -80,3 +82,6 @@ public class Matriz {
         }
   
 }
+    
+
+
